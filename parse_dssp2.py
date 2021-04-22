@@ -1,7 +1,6 @@
-aa_code_list = ['A', 'R', 'N', 'D', 'C', 'E', 'Q', 'G', 'H', 'I', 'L', 'K', 'M', 'F', 'P', 'S', 'T', 'W', 'Y', 'V', 'U', 'O']
-struct_code_list = ['G', 'H', 'I', 'T', 'E', 'B', 'S', 'P']
+from ressources import *
 
-def parse_dssp(dssp_file):
+def parse_dssp_pp2(dssp_file):
     #Recovery of protein and structural sequences in .dssp file
 
     #Initialization:
@@ -38,16 +37,16 @@ def parse_dssp(dssp_file):
                     aa_seq += " "
                 else:
                     #There is a problem
-                    aa_seq += "x"
+                    aa_seq += "$"
 
                 struct_code = line[16]
-                if struct_code in struct_code_list:
+                if struct_code in struct_code_list_2:
                     struct_seq += struct_code
                 elif struct_code == " ":
                     struct_seq += "C"
                 else:
                     #There is a problem
-                    struct_seq += "x"
+                    struct_seq += "$"
 
                 phi_list.append(line[103:109].strip())
                 psi_list.append(line[109:115].strip())
@@ -68,10 +67,10 @@ def parse_dssp(dssp_file):
         for i in range(len(aa_seq)):
             file_out.write(" {} {} {} {}\n".format(aa_pos[i], chain_ID_seq[i], aa_seq[i], struct_seq[i]))
 
-    return aa_pos, chain_ID_seq, aa_seq, struct_seq
+    return struct_seq
 
-def main():
-    dssp_file = "4hhb.dssp"
+"""def main():
+    dssp_file = "1oip.dssp"
     aa_pos, chain_ID_seq, aa_seq, struc_seq = parse_dssp(dssp_file)
     print(aa_pos)
     print(chain_ID_seq)
@@ -79,4 +78,4 @@ def main():
     print(struc_seq)
 
 main()
-exit(0)
+exit(0)"""
