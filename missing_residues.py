@@ -14,3 +14,23 @@ def missing_residues(pdb_file):
 
 
 
+
+def compare_seq( pos_base, sequence_base, pos_test,sequence_test):
+	#liste des positions ou la sequence n'est pas identique
+	pos_difference=[]
+
+	for i in range(len(pos_base)):
+		if pos_base[i] == pos_test[i]:
+			if sequence_base[i] != sequence_test[i]:
+				pos_difference.append(i)
+	return pos_difference 
+
+"""def main():
+    pos_base=['1','2','3','4']
+    sequence_base='BBCD'
+    pos_test=['1','2','3','4']
+    sequence_test='ABCD'
+    print(compare_seq(pos_base, sequence_base, pos_test,sequence_test))
+
+
+main()"""

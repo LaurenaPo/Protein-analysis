@@ -53,8 +53,8 @@ def parse_dssp(dssp_file):
 
             line = file_in.readline()
 
-    print("phi: ", phi_list)
-    print("psi: ", psi_list)
+    #print("phi: ", phi_list)
+    #print("psi: ", psi_list)
     #Writing sequences in a fasta file
     dssp_file_parsed = dssp_file[0:4] + "_output_dssp.fasta"
     with open(dssp_file_parsed, "w+") as file_out:

@@ -18,7 +18,7 @@ def parse_promotif_sst(sst_file):
 					struct_seq.append("C")
 				else:
 					struct_seq.append(line[21:22])
-				print(" {} Chain->{} pos ->{}  {}  {} {}".format(line[1:4],line[6:7],line[7:11],line[12:19],line[19:20],line[21:22]))
+				"""print(" {} Chain->{} pos ->{}  {}  {} {}".format(line[1:4],line[6:7],line[7:11],line[12:19],line[19:20],line[21:22]))"""
 			else:
 				break
     #Writing sequences in a fasta file
@@ -31,7 +31,7 @@ def parse_promotif_sst(sst_file):
 		#Column3: amino acid sequence in one letter code
 		for i in range(len(aa_sequence)):
 			file_out.write("   {}         {}       {}         {}\n".format(aa_pos[i], chain_ID[i], aa_sequence[i],struct_seq[i]))
-	return struct_seq
+	return aa_pos, aa_sequence,struct_seq
 
 
 """def main():
