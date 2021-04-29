@@ -25,11 +25,12 @@ def parse_stride(stride_file):
         file_out.write("  POS C A S\n")
         for i in range(len(aa_seq)):
             file_out.write(" {} {} {} {}\n".format(aa_pos[i], chain_ID_seq[i], aa_seq[i], struct_seq[i]))
-    return aa_seq, struct_seq
+    return aa_pos, aa_seq, struct_seq
 
 """def main():
     stride_file = "1oip.stride"
-    aa_seq, struc_seq = parse_stride(stride_file)
+    aa_pos,aa_seq, struc_seq = parse_stride(stride_file)
+    print(aa_pos)
     print(aa_seq)
     print(struc_seq)
 
