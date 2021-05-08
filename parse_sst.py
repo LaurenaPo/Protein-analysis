@@ -1,9 +1,9 @@
 
 def parse_promotif_sst(sst_file):
-	aa_sequence = []
+	aa_sequence = ""
 	aa_pos = []
-	chain_ID = []
-	struct_seq = []
+	chain_ID = ""
+	struct_seq =""
 	with open(sst_file, 'r') as file_in:
 		word = "Sec"
 		#Skip th wo first lines
@@ -11,13 +11,13 @@ def parse_promotif_sst(sst_file):
 			next(file_in)
 		for line in file_in:
 			if word not in line:
-				aa_pos.append(line[8:11])
-				aa_sequence.append(line[19:20])
-				chain_ID.append(line[6:7])
+				aa_pos.append(line[7:11])
+				aa_sequence+=line[19:20]
+				chain_ID+=line[6:7]
 				if line[21:22] ==" ":
-					struct_seq.append("C")
+					struct_seq+="C"
 				else:
-					struct_seq.append(line[21:22])
+					struct_seq+=line[21:22]
 				"""print(" {} Chain->{} pos ->{}  {}  {} {}".format(line[1:4],line[6:7],line[7:11],line[12:19],line[19:20],line[21:22]))"""
 			else:
 				break
