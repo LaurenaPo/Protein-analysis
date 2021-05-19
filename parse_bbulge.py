@@ -21,7 +21,7 @@ def parse_promotif_bbulge(bbulge_file):
 
 
 	#writting sequences in format file
-	bbulge_parsed_file = bbulge_file[0:4]+"Output_bbulge.fasta"
+	bbulge_parsed_file = bbulge_file[0:4]+"Output_bbulge.txt"
 	with open(bbulge_parsed_file,"w+") as file_out:
 		file_out.write("> {} PARSED\n\n".format(bbulge_file))
 		#Column 1: position

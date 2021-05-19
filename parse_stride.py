@@ -15,7 +15,7 @@ def parse_stride(stride_file):
                 chain_ID_seq += line[9:10]
 
     #Writing sequences in a fasta file
-    stride_file_parsed = stride_file[0:4]+"_output_stride.fasta"
+    stride_file_parsed = stride_file[0:4]+"_output_stride.txt"
     with open(stride_file_parsed, "w+") as file_out:
         file_out.write(">{} PARSED\n".format(stride_file))
         #Column1: position
