@@ -56,7 +56,7 @@ def parse_dssp(dssp_file):
     #print("phi: ", phi_list)
     #print("psi: ", psi_list)
     #Writing sequences in a fasta file
-    dssp_file_parsed = dssp_file[0:4] + "_output_dssp.fasta"
+    dssp_file_parsed = dssp_file[0:4] + "_output_dssp.txt"
     with open(dssp_file_parsed, "w+") as file_out:
         file_out.write(">{} PARSED\n".format(dssp_file))
         #Column1: position

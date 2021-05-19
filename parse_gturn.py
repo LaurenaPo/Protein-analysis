@@ -18,7 +18,7 @@ def parse_promotif_gturn(gturn_file):
 
 
 	#writting sequences in format file
-	gturn_parsed_file = gturn_file[0:4]+"Output_gturn.fasta"
+	gturn_parsed_file = gturn_file[0:4]+"Output_gturn.txt"
 	with open(gturn_parsed_file,"w+") as file_out:
 		file_out.write("> {} PARSED\n\n".format(gturn_file))
 		file_out.write("            Position          Chain     Sequence      Type\n")

@@ -16,7 +16,7 @@ def parse_promotif_bturn(bturn_file):
 				
 
 	#writting sequences in format file
-	bturn_parsed_file = bturn_file[0:4]+"Output_bturn.fasta"
+	bturn_parsed_file = bturn_file[0:4]+"Output_bturn.txt"
 	with open(bturn_parsed_file,"w+") as file_out:
 		file_out.write("> {} PARSED\n\n".format(bturn_file))
 		file_out.write("            Postion                  Chain     Sequence\n")
