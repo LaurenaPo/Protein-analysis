@@ -256,15 +256,19 @@ def common_output(pdb_file, dssp_file, dssp2_file, stride_file, sst_file, bturn_
 
 
 def main():
-    pdb_file = "1oip.pdb"
-    dssp_file = pdb_file[0:4] + ".dssp"
-    dssp2_file = pdb_file[0:4] + ".dssp2"
-    stride_file = pdb_file[0:4] + ".stride"
-    sst_file = pdb_file[0:4] + ".sst"
-    bturn_file = pdb_file[0:4] + ".bturns"
-    gturn_file = pdb_file[0:4] + ".gturns"
-    bbulge_file = pdb_file[0:4] + ".blg"
-    common_output(pdb_file, dssp_file, dssp2_file, stride_file, sst_file, bturn_file, gturn_file, bbulge_file)
+    args = sys.argv[0:]
+    if len(args[0])==4:
+        pdb_file = args[0]+".pdb"
+        dssp_file = pdb_file[0:4] + ".dssp"
+        dssp2_file = pdb_file[0:4] + ".dssp2"
+        stride_file = pdb_file[0:4] + ".stride"
+        sst_file = pdb_file[0:4] + ".sst"
+        bturn_file = pdb_file[0:4] + ".bturns"
+        gturn_file = pdb_file[0:4] + ".gturns"
+        bbulge_file = pdb_file[0:4] + ".blg"
+        common_output(pdb_file, dssp_file, dssp2_file, stride_file, sst_file, bturn_file, gturn_file, bbulge_file) 
+    else:
+        print("fichier {}.pdb incorrect".format(args[0]))
 
 
 main()
