@@ -1,6 +1,6 @@
 # Protein-analysis
 
-This is a tool which gathers three tools to get an overview of the protein secondary structure assignment
+This is a tool which gathers three tools to get an overview of the protein secondary structure assignment  
 The three tools are : DSSP, Stride and Promotif
 
 ## How to use
@@ -12,9 +12,9 @@ The three tools are : DSSP, Stride and Promotif
 To launch the script file. Use **./script.sh "pdb code"**  . This will launch the tool and create the output files.
 
 ## Output format
-The main output file is named **"pdb code"_final_output** 
+The main output file is named **"pdb code"_final_output**  
 The file contains 10 columns
-
+### Columns
 1. column 1 :
 Position of the residue 
 2. column 2 :
@@ -38,17 +38,18 @@ Classical 3 states "H" "E" "C"
 9. column 9 :
   A flag **#** can occur if between the 3 tools a difference is seen the difference can be :
    * difference of residue 
-   * difference of secondary structure assignment 
-   
-* If a flag appears, see remarks at the end of the file
+   * difference of secondary structure assignment   
+ 
+   If a flag appears, see remarks at the end of the file
 
 10.  column 10 :
 Special structure from Promotif :
      * if the letter is **B** the residue form a beta-turn
      * if the letter is **G** the residue form a gamma-turn
      * if the letter is **L** the residue form a beta-bulge
-     * if the letter is **M** the residue have multiple special structure
+     * if the letter is **M** the residue have multiple special structure  
 
-After the columns there is two confusion matrix. 
-The first one is between DSSP and Stride
-The second one is between DSSP and Promotif
+### Confusion matrix
+After the columns there is two confusion matrix.   
+The first one is between DSSP and Stride  
+The second one is between DSSP and Promotif  
