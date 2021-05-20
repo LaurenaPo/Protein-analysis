@@ -48,3 +48,7 @@ Special structure from Promotif :
      * if the letter is **G** the residue form a gamma-turn
      * if the letter is **L** the residue form a beta-bulge
      * if the letter is **M** the residue have multiple special structure
+
+After the columns there is two confusion matrix. 
+The first one is between DSSP and Stride
+The second one is between DSSP and Promotif
