@@ -59,3 +59,6 @@ There is 7 types of remarks
 * Remark 2 : difference of residue between DSSP and Promotif
 * Remark 3 : difference of secondary structure assignment between DSSP and Stride
 * Remark 4 : difference of secondary structure assignment between DSSP and Promotif
+* Remark 5 : beta-turn position and sequence
+* Remark 6: gamma-turn position and sequence
+* Remark 7: beta-bulge position and sequence
