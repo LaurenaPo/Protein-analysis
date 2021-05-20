@@ -50,6 +50,12 @@ Special structure from Promotif :
      * if the letter is **M** the residue have multiple special structure  
 
 ### Confusion matrix
-After the columns there is two confusion matrix.   
+There is two confusion matrix.   
 The first one is between DSSP and Stride  
 The second one is between DSSP and Promotif  
+### Remarks
+There is 7 types of remarks  
+* Remark 1 : difference of residue between DSSP and Stride
+* Remark 2 : difference of residue between DSSP and Promotif
+* Remark 3 : difference of secondary structure assignment between DSSP and Stride
+* Remark 4 : difference of secondary structure assignment between DSSP and Promotif
